@@ -1,31 +1,17 @@
-# TriOrigin Labs website
+# TriOrigin Labs Website v0.3
 
-Static GitHub Pages website for **TriOrigin Labs** at `https://trioriginlabs.com`.
+Premium static launch build for `trioriginlabs.com`.
 
-## Current release
+## Architecture
+- Semantic HTML pages in the repository root and section folders
+- Modular CSS in `assets/css/`
+- One small JavaScript file in `assets/js/site.js`
+- No framework, build step, search, analytics, cookies or external font dependency
 
-Website v0.2 — repository-integrated beta.
+The site can be deployed directly to GitHub Pages by committing these files to the repository root.
 
-## Stack
+## Current launch scope
+The public navigation is intentionally limited to Home, Learn, Evidence and About. Search, Health, Tools, Journal and Products are not included in this release.
 
-- Semantic HTML
-- Responsive CSS
-- Vanilla JavaScript
-- GitHub Pages
-- No build step or external framework
-
-## Local preview
-
-From the repository root:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
-
-## Deployment
-
-GitHub Pages should publish from the `main` branch repository root. Keep the `CNAME` file unchanged so the custom domain remains connected.
-
-See `DEPLOYMENT_GUIDE.md` for migration and rollback steps.
+## Identity note
+The header uses a clean text-based TriOrigin signature and the approved three-circle motif. Replace it with the final production SVG wordmark when the vector master is approved.

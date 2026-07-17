@@ -1,0 +1,57 @@
+@layer components {
+  .reading-progress { position: fixed; inset: 0 0 auto; height: 2px; z-index: 200; pointer-events: none; }
+  .reading-progress span { display: block; width: 0; height: 100%; background: var(--teal); }
+
+  .site-header {
+    position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.94);
+    border-bottom: 1px solid rgba(217,224,226,.85); backdrop-filter: blur(14px);
+  }
+  .header-shell { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+  .brand { width: max-content; display: inline-grid; justify-items: center; color: var(--fjord); text-decoration: none; line-height: 1; }
+  .brand-name { font-family: var(--font-display); font-size: 1.55rem; letter-spacing: -.035em; }
+  .brand-origins { display: flex; gap: .24rem; margin-top: .38rem; }
+  .brand-origins i { width: .27rem; aspect-ratio: 1; border: 1px solid currentColor; border-radius: 50%; }
+  .primary-nav { display: flex; align-items: center; gap: 2.25rem; }
+  .primary-nav a { position: relative; color: #405560; font-size: .86rem; font-weight: 650; text-decoration: none; }
+  .primary-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -.65rem; height: 1px; background: var(--fjord); transition: right .22s var(--ease); }
+  .primary-nav a:hover, .primary-nav a[aria-current="page"] { color: var(--fjord); }
+  .primary-nav a:hover::after, .primary-nav a[aria-current="page"]::after { right: 0; }
+  .menu-toggle { display: none; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+  .menu-toggle i { display: block; width: 22px; height: 1px; margin: 6px auto; background: var(--navy); transition: transform .2s var(--ease); }
+  .menu-toggle[aria-expanded="true"] i:first-of-type { transform: translateY(3.5px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] i:last-of-type { transform: translateY(-3.5px) rotate(-45deg); }
+  .mobile-navigation { border-top: 1px solid var(--line); background: var(--white); }
+  .mobile-navigation nav { display: grid; padding-block: 1rem 1.5rem; }
+  .mobile-navigation nav > a { padding: .8rem 0; border-bottom: 1px solid var(--line); font-family: var(--font-display); font-size: 1.45rem; text-decoration: none; }
+  .mobile-subnav { display: grid; gap: .6rem; padding-top: 1.25rem; }
+  .mobile-subnav a { color: var(--slate); font-size: .85rem; text-decoration: none; }
+
+  .button {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 50px;
+    padding: .85rem 1.35rem; border: 1px solid transparent; border-radius: var(--radius-sm);
+    font-size: .82rem; font-weight: 760; letter-spacing: .02em; text-decoration: none;
+    transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease);
+  }
+  .button:hover { transform: translateY(-2px); }
+  .button-primary { background: var(--fjord); color: var(--white); }
+  .button-primary:hover { background: var(--fjord-700); }
+  .button-light { background: var(--white); color: var(--navy); }
+  .button-light:hover { background: var(--mist); }
+  .button-outline { border-color: var(--fjord); color: var(--fjord); }
+  .button-outline:hover { background: var(--fjord); color: var(--white); }
+
+  .site-footer { padding: 5.5rem 0 1.5rem; background: var(--navy); color: var(--white); }
+  .footer-main { display: grid; grid-template-columns: 1.1fr 1.4fr; gap: 7rem; }
+  .brand-inverse { color: var(--white); }
+  .footer-intro p { max-width: 380px; margin-top: 1.6rem; color: #b7c9d0; font-size: .93rem; }
+  .footer-nav { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+  .footer-nav h2 { margin-bottom: 1.25rem; color: #91adb8; font-family: var(--font-sans); font-size: .68rem; font-weight: 760; letter-spacing: .16em; text-transform: uppercase; }
+  .footer-nav a { display: block; width: max-content; margin: .62rem 0; color: var(--white); font-size: .83rem; text-decoration-thickness: 1px; text-underline-offset: .25rem; }
+  .footer-legal { display: flex; justify-content: space-between; gap: 3rem; margin-top: 4.5rem; padding-top: 1.35rem; border-top: 1px solid #315064; color: #9cb1ba; font-size: .72rem; }
+  .footer-legal p:first-child { max-width: 680px; }
+
+  .confidence { display: inline-grid; gap: .15rem; padding: .65rem .75rem; border: 1px solid currentColor; border-radius: var(--radius-sm); }
+  .confidence span { font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .confidence small { font-size: .66rem; opacity: .78; }
+  .confidence-high { background: var(--green-pale); color: var(--green); }
+}

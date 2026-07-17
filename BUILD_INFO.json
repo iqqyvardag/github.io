@@ -1,8 +1,13 @@
 {
-  "project": "TriOrigin Labs",
-  "version": "0.2.0",
-  "build_date": "2026-07-17",
-  "deployment_target": "GitHub Pages",
-  "custom_domain": "trioriginlabs.com",
-  "status": "repository-integrated beta"
+  "name": "TriOrigin Website",
+  "version": "0.3.0",
+  "release_name": "Premium Foundation Edition",
+  "date": "2026-07-17",
+  "pages": 18,
+  "navigation": ["Home", "Learn", "Evidence", "About"],
+  "search": false,
+  "framework": "none",
+  "external_fonts": false,
+  "analytics": false,
+  "cookies": false
 }
